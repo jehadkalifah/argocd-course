@@ -10,6 +10,9 @@ spec:
     targetRevision: HEAD
     path: helm-guestbook
     helm:
+      valuesObject:
+        # Tells the Helm chart to use guestbook-ui as the full name of the Kubernetes resources it creates, instead of generating a name based on the Helm release/chart name
+        fullnameOverride: guestbook-ui
       valueFiles:
         - values.yaml
   destination:
