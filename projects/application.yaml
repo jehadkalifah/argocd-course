@@ -9,6 +9,10 @@ spec:
     repoURL: https://github.com/jehadkalifah/argocd-example-apps.git
     path: helm-guestbook
     targetRevision: HEAD 
+    helm:
+      parameters:
+        - name: namespace
+          value: finance    
   destination:
     server: https://kubernetes.default.svc
     namespace: finance
