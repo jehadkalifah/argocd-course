@@ -8,9 +8,12 @@ spec:
   sourceRepos:
     - 'https://github.com/jehadkalifah/argocd-example-apps.git'
   destinations:
-    - server: https://kubernetes.default.svc
-      # namespace: finance
-      namespace: '*'
+  # - server: https://kubernetes.default.svc
+  #   namespace: '*'  
+  - server: https://kubernetes.default.svc
+    namespace: finance
+  - server: https://kubernetes.default.svc
+    namespace: management  
   # clusterResourceWhitelist:
   #   - group: ''
   #     kind: Namespace
